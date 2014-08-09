@@ -22,7 +22,7 @@
 set :output, { error: 'log/error.log', standard: 'log/cron.log' }
 env :PATH, '/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin'
 
-every 2.minutes do
+every 10.minutes do
   runner "Station.get_stations_data"
 end
 
