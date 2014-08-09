@@ -30,6 +30,13 @@ gem 'whenever', :require => false
 # Gem for enabling CORS from heroku to clitent side app
 gem 'rack-cors', :require => 'rack/cors'
 
+# Visualize database in rails console
+gem 'hirb',   group: :development
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
