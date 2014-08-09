@@ -2,7 +2,7 @@ class API::StationsController < ApplicationController
 
   def index
     @stations = Station.all
-    if @stations
+    if @stations.length > 0
       respond_to do |format|
         format.json do
           render :json => @stations.to_json
@@ -10,6 +10,7 @@ class API::StationsController < ApplicationController
       end
     else
       render :json => {"error" => "No stations to populate"}.to_json
+    end
   end
 
 end
