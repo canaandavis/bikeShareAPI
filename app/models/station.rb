@@ -1,3 +1,6 @@
+require 'net/http'
+require 'json'
+
 class Station < ActiveRecord::Base
 
   def self.get_stations_data(request_url = 'http://api.citybik.es/v2/networks/austin?fields=stations')

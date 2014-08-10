@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140809203241) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "stations", force: true do |t|
     t.integer "empty_slots"
     t.integer "free_bikes"
