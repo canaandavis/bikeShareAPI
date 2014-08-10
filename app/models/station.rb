@@ -20,7 +20,6 @@ class Station < ActiveRecord::Base
 
   def self.add_stations(stations)
     stations.each do |station|
-      puts station["latitude"]
       current_station = Station.find_by(network_id: station["id"])
       if current_station
         current_station.update(
