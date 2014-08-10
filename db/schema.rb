@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140809203241) do
+ActiveRecord::Schema.define(version: 20140810162538) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20140809203241) do
     t.decimal "longitude"
     t.string  "name"
     t.string  "network_id"
+    t.string  "timestamp"
   end
 
 end

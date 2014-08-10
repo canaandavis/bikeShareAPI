@@ -27,7 +27,8 @@ class Station < ActiveRecord::Base
           empty_slots: station["empty_slots"],
           free_bikes: station["free_bikes"],
           longitude: station["longitude"],
-          latitude: station["latitude"]
+          latitude: station["latitude"],
+          timestamp: station["timestamp"]
         )
       else
         Station.create(
@@ -36,7 +37,8 @@ class Station < ActiveRecord::Base
           free_bikes: station["free_bikes"],
           longitude: station["longitude"],
           latitude: station["latitude"],
-          network_id: station["id"]
+          network_id: station["id"],
+          timestamp: station["timestamp"]
         )
       end
     end
